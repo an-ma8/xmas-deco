@@ -1,0 +1,167 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* width includes border*/
+}
+
+/*Main background and body text one each pg*/
+body{
+    font-family: Arial, Helvetica, sans-serif; 
+    line-height: 2.6; /*This helps to fill out the content across the Home page in particular better, avoiding large empty space*/ 
+    color: rgb(35, 3, 94);
+    background-color: rgb(216, 245, 222);
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgb(53, 108, 66);
+    color: rgb(248, 244, 244);
+    line-height: 1.3; /*Website name had too much space between words in mobile view*/
+    padding: 44px 32px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-color: white;
+    color: rgb(49, 3, 105);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    line-height: 1.5;  
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 1000; /*Bold size of h1*/
+    flex: 1; /* allows the h1 to make up avail space*/
+    }
+
+#hamburger_menu {
+  display: none;                 
+  cursor: pointer;               
+  z-index: 1001;                 
+  margin-left: 18px;             
+}
+
+#hamburger_checkbox {
+  display: none; /* hides checkbox */
+}
+
+
+/* Menu icon image. */
+#hamburger_icon {
+  display: none;                 
+  width: 50px;                   
+  height: 80px;           
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end; 
+  flex: none; 
+}
+
+nav a {
+  font-size: 26px;
+   color: rgb(248, 246, 253); 
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 58px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover { /* Menu link hover. */
+    background: rgb(243, 101, 101); /* background when mouse hovers over Home, photos etc */
+    color: rgb(241, 238, 245);
+    transform: scale(1.3); /*makes hovered link in header menu bigger*/
+}
+
+nav a.active_nav { /* Highlight the current pg lnk in top header */
+   background: rgb(8, 165, 8) ;  
+   color: white;
+}
+
+/* Mobile view for screens up to 768px. */
+@media only screen and (max-width: 768px) {
+    #hamburger_menu {
+    display: block !important;
+  }
+
+  
+  #hamburger_icon {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px; 
+    background-color:  rgb(53, 108, 66);
+    position: absolute; 
+    top: 100%;
+    right: 0;
+    width: 120px;
+    z-index: 999;
+    border-radius: 0 0 26px 26px;
+  }
+
+#hamburger_checkbox:checked ~ nav {
+    display: flex;
+  }
+
+  /* Dropdown link styles. */
+  nav a {
+    padding: 16px;
+    border-radius: 0;
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+/* Desktop styles: screens from 769px and bigger. */
+@media only screen and (min-width: 769px) {
+#hamburger_menu {
+    display: none;
+}
+
+nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    position: static; 
+    width: auto;
+    background: none;
+  }
+}
+
+
+.sr-only {
+  position: absolute !important; /* remove from normal layout */
+  width: 1px !important;         /* tiny width */
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;       /* offset margin */
+  overflow: hidden !important;   /* hide overflow */
+  clip: rect(0, 0, 0, 0) !important;   /* clip visible area (older browsers) */
+  clip-path: inset(50%) !important;    /* clip visible area (modern browsers) */
+  white-space: nowrap !important;      /* prevent wrapping */
+  border: 0 !important;                /* no border */
+}

@@ -1,0 +1,84 @@
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+main > div {
+    padding: 40px;
+    background-color: rgb(218, 218, 124);
+    border-radius: 90px;
+    font-size: 16px;
+    text-align: center;
+}
+
+main > div > a {
+    color: rgb(18, 21, 18);
+    font-size: 16px;
+}
+
+main > div > a:hover {
+    background-color: white;
+    color: blue;
+    }
+
+    main > div > a:focus {
+        background-color: rgb(242, 226, 226);
+    }
+
+    #container1 {
+       background-color: whitesmoke;
+       color: rgb(20, 5, 91);
+       grid-area: area1;
+       text-align: center;
+    }
+
+    
+    #container2 {
+        background-color:  rgb(218, 218, 124);
+        color: rgb(20, 5, 91);
+        grid-area: area2;
+        text-align: center;
+    }
+
+        
+    #container3 {
+        background-color: rgb(251, 204, 204);
+        color: rgb(20, 5, 91);
+        grid-area: area3;
+        text-align: center;
+    }
+        
+    #container4 {
+        background-color: rgb(154, 245, 154);
+        color: rgb(20, 5, 91);
+        grid-area: area4;
+        text-align: center;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas:
+            'area1'
+            'area2'
+            'area3'
+            'area4';
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-gap: 20px;
+            padding: 120px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        main {
+                grid-template-areas: 
+                'area1 area2'
+                'area3 area4';
+        }
+    }

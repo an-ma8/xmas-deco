@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewpoint fits the page to the screen. content=width is auto fit to size of screen-->
+    <meta name="description" content="Bring your Christmas vision to life with inspiring décor ideas for every style and celebration."> <!--blurb that appears in search engine-->
+    <title>Christmas decorating</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1> Christmas decorating</h1>
+        <input id="hamburger_checkbox" type="checkbox"> <!--checkbox is showing on page, css will hide it-->
+        <label for="hamburger_checkbox" id="hamburger_icon">
+             <img src="images/hamburger_menu.png" alt="Menu" width="60" height="60"> <!--Size of Gold Gift box used as Menu icon-->
+            <span class="sr-only"> Toggle navigation</span> <!--toggle is showing atm, it will be hidden with css-->
+        </label>
+        <nav>
+            <a class="active_nav" href="index.html">Home</a>
+            <a href="photos.html">Photos</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <aside>   <!--side bar of page for external links from my page to the web-->
+            <b> Check out these links:</b>
+            <a href="https://www.brightstarkids.com.au/blog/20-easy-christmas-craft-for-kids/?srsltid=AYCX9vJKlWaUQk2wZI2wnWpET315dBJxAH7S7bvFbrAB9wc5sUKdMMH6" target="_blank">Kids Christmas Crafts</a>
+            <a href="https://www.resene.com.au/holiday-diy/christmas-crafts-projects.htm?srsltid=AYCX9vKHYvqDQCwxadjkH3FFL5FG-PSuEhHVavllC_XRViIUcQBu-PPN" target="_blank">Christmas Craft Projects</a>
+            <a href="https://www.diybeautify.com/2025/07/Christmas-in-July-25-vintage-inspired-ideas.html" target="_blank">Vintage ideas for Christmas in July</a>
+            <a href="https://www.biome.com.au/blogs/eco-home/how-to-celebrate-christmas-the-aussie-way-home-table-tree-and-traditions?srsltid=AYCX9vI26fhcNGIkibYs6hM70rx0rpSTF0fkKR79AkmuHs8gt74pW-hB" target="_blank">Australian Bush Christmas</a>
+        </aside>
+            <section class="hero">
+            <h2>Featured image</h2>
+                        <picture>
+                <source media="(min-width: 1200px)" srcset="images/hero_1920.jpg">
+                <source media="(min-width: 600px)" srcset="images/hero_960.jpg">
+                <img src="images/hero_480.jpg" alt="Gifts wrapped in brown paper, tied with string, surrounded by Christmas balls and pine tree cuttings."> <!--fallback image if the previous two aren't suitable for screen and description of image-->
+            </picture>
+        </section>
+ </main>
+     <p> A Christmas wonderland of creativity galore.</p>
+   <p> Discover a wide range of DIY art, craft, and decorating ideas to help bring the magic and spirit of Christmas to your event.</p>
+    <footer>
+       <p>Thank you for visiting!</p>
+        <p><i>&copy; 2026 Images used are attributed to unsplash.com free images website</i></p>
+    </footer>
+</body>
+</html>
